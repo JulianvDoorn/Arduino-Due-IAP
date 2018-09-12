@@ -1,0 +1,3 @@
+[submodule "lib/hwlib"]
+	path = lib/hwlib
+	url = git@github.com:wovo/hwlib.git
