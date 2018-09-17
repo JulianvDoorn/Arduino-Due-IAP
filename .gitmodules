@@ -1,6 +1,3 @@
 [submodule "lib/hwlib"]
 	path = lib/hwlib
 	url = git@github.com:wovo/hwlib.git
-[submodule "lib/uart-lib"]
-	path = lib/uart-lib
-	url = git@github.com:R2D2-2018/UART_LIB.git
