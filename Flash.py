@@ -10,7 +10,7 @@ from sys import stdin, stdout
 VERSION = "0.0.1"
 
 BANNER = """
-DiGidot driver flashtool v%s
+Run-time code flashtool v%s
 """ % VERSION
 
 class Controller(CementBaseController):
@@ -30,7 +30,6 @@ class Controller(CementBaseController):
 
     class Meta:
         label = "base"
-        description = "DiGidot driver flashtool used for flashing .bin files to DiGidot LED logic devices"
         arguments = [
             (["-v", "--version"], dict(action="version", version=BANNER)),
             (["-i", "--input"], dict(help="Sets the input *.bin file")),
