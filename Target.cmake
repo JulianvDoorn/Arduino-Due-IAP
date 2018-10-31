@@ -12,8 +12,10 @@ set(warnings
 "-Wno-missing-field-initializers")
 
 set(cxxflags
-"-std=c++14"
+"-std=c++17"
 "-Os"
+# "-fkeep-inline-functions"
+# "-fno-inline"
 ${warnings})
 
 string(REGEX REPLACE ";" " " cxxflags "${cxxflags}")
@@ -34,7 +36,12 @@ set (cxxflags
     "-fdata-sections"
     "-fno-exceptions"
     "-fno-rtti"
-    "-fno-threadsafe-statics")
+    "-fno-threadsafe-statics"
+    "-specs=nano.specs"
+    "-specs=nosys.specs"
+    # "-fkeep-inline-functions"
+    # "-fno-inline"
+    )
 
 string (REGEX REPLACE ";" " " cxxflags "${cxxflags}")
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${cxxflags}")

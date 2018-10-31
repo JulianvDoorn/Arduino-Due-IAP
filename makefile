@@ -1,7 +1,11 @@
 .PHONY: all clean help
 
+# ${KVASIR_TOOLCHAIN}/targets/arm32/cm3/deps
+# ${KVASIR_TOOLCHAIN}/targets/arm32/cm3/atmel/sam3x/deps
+# ${KVASIR_TOOLCHAIN}/targets/arm32/cm3/atmel/sam3x/sam3x8e/deps
+
 lib.o: lib.c lib.h
-	@arm-none-eabi-gcc -c lib.c -Os -Ideps --std=c11 -fPIC -mcpu=cortex-m3 -mthumb -fomit-frame-pointer -march=armv7-m -fno-exceptions
+	@arm-none-eabi-gcc -c lib.c -Os -Ideps --std=c11 -fPIC -mcpu=cortex-m3 -mthumb -fomit-frame-pointer -march=armv7-m -fno-exceptions -Os -I${KVASIR_TOOLCHAIN}/targets/arm32/cm3/deps -I${KVASIR_TOOLCHAIN}/targets/arm32/cm3/atmel/sam3x/deps
 
 lib-resolved.o: lib.o link-driver.ld
 	@arm-none-eabi-ld lib.o -o lib-resolved.o -T link-driver.ld

@@ -6,6 +6,8 @@ int main() {
 	while (*str != '\0') {
 		uart_putc(*str++);
 	}
+
+	return 0;
 }
 
 void uart_putc(char c) {

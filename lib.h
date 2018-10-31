@@ -5,6 +5,6 @@
 
 int main();
 
-void uart_putc(char c);
+inline void __attribute__((always_inline)) uart_putc(char c);
 
 #endif // LIB_H

@@ -4,6 +4,8 @@ cmake_minimum_required(VERSION 3.0.0)
 
 set(sources main.cpp)
 
+include(flashtools/FlashTools.cmake)
+
 include(Target.cmake)
 include(Hwlib.cmake)
 
